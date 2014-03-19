@@ -376,6 +376,11 @@ define(function (require) {
                         that.api_key = test_api_key;
                     }
                     
+                    if(is_emulator===true){
+                        that.device_id = test_device_id;
+                        that.api_key = test_api_key;
+                    }
+                    
                     if(typeof(that.device_id)==='undefined' || that.device_id===null){
                         that.setDeviceDetails();
                     }
