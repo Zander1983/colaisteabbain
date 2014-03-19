@@ -14,7 +14,7 @@
         gmail = 'colaisteabbain.wexford@gmail.com',
         is_push = false,
         is_emulator = true,
-        in_browser = false;
+        in_browser = true;
 
     /********device id and api key for browser testing*********/
     var test_device_id = 87,
