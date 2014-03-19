@@ -241,7 +241,7 @@ define(function (require) {
 
                         },
                         error:   function(model, xhr, options){
-
+                           Useful.correctView(that.body); 
                            Useful.hideSpinner();
                            Useful.checkNetwork(slider);
 
@@ -278,12 +278,12 @@ define(function (require) {
                             slider.slidePage(new EventList({collection: collection}).$el);                          
                             Useful.hideSpinner();
                         },
-                            error:function(){
+                        error:function(){
+                            Useful.correctView(that.body); 
+                            Useful.hideSpinner();
+                            Useful.checkNetwork(slider);
 
-                                Useful.hideSpinner();
-                                Useful.checkNetwork(slider);
-                        
-                            }
+                        }
                     });
                 }
                 else{
@@ -396,9 +396,6 @@ define(function (require) {
                             flickr_user_id = data.get('flickr_user_id');
                             flickr_api_key = data.get('flickr_api_key');
                             
-                            console.log('flickr_api_key is ');
-                            console.log(flickr_api_key);
-                            
                             albums = new model.AlbumCollection({flickr_api_key:flickr_api_key, flickr_user_id:flickr_user_id});
 
                             albums.fetch({
@@ -416,8 +413,9 @@ define(function (require) {
                             });
                         },
                         error:   function(model, xhr, options){
-                           alert('Error on fetch')
-                           console.log(xhr.responseText);
+                           Useful.correctView(that.body); 
+                           Useful.hideSpinner();
+                           Useful.checkNetwork(slider);
                         },
                     });
 
