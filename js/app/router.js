@@ -21,7 +21,7 @@ define(function (require) {
     return Backbone.Router.extend({
 
         routes: {
-            "": "getGeneric",
+            "": "getHome",
             "news": "getGeneric",
             "news-item/:id": "getGenericItem",
             "people": "getGeneric",
@@ -112,6 +112,21 @@ define(function (require) {
           
                 
          /******************STANDARD HELPER FUNCTIONS*******************/       
+         getHome: function(){
+    
+            require(["app/views/Home"], function (Home) {
+
+                if(is_push===false){
+                    slider.slidePage(new Home().$el);                       
+                }
+                is_push = false;
+
+            });
+            
+    
+        },
+                
+ 
         setupShell: function(){
     
             require(["app/views/SetupShell"], function (SetupShell) {

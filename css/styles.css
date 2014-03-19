@@ -177,7 +177,7 @@ body.left-nav .topcoat-navigation-bar, body.left-nav #main-content {
     overflow-x:hidden;
     
     position: absolute;
-    background: #dfe2e2;
+    background: #fff;
     left: 0;
     /*padding-top:4rem;*/
     margin-top:4rem;
@@ -333,6 +333,10 @@ ul#picture-list > li{
 
 #topbar-title{
     text-transform:capitalize;
+}
+
+.fifth{
+    width:20%;
 }
 
 

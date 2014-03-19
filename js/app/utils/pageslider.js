@@ -70,7 +70,7 @@ define(function (require) {
                 }
 
                 if(state==="undefined" || state===""){
-                    var title = 'News';                   
+                    var title = 'Home';                   
                 }
                 else{
                     var title = state;
