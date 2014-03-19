@@ -4,6 +4,7 @@ html, body{
     overflow-x:hidden;
     height:100%;
     width:100%;
+    background-color: #fff;
 }
 
 
@@ -277,6 +278,7 @@ html, body, #map-container{
 
 .topcoat-list{
     list-style-type: none;
+    background-color: #fff;
 }
 
 
