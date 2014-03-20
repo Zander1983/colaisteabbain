@@ -34,8 +34,10 @@ define(function (require) {
             "about-us-item/:id": "getGenericItem",
             "further-education": "getGeneric",
             "further-education-item/:id": "getGenericItem",
+           
             
             /*****In Every Project**************/
+            "contact": "getContact",
             "events": "getEvent",
             "events-item/:id": "getEventItem",
             "facebook": "getFacebook",
@@ -231,7 +233,7 @@ define(function (require) {
                         update:false,
                         success: function (collection) {
                             Useful.correctView(that.body);
-
+                            console.log('in the success ');
                             if(is_push===false){
                                 slider.slidePage(new GenericList({collection: collection}).$el);                         
                             }
@@ -241,6 +243,7 @@ define(function (require) {
 
                         },
                         error:   function(model, xhr, options){
+                            console.log('in the error');
                            Useful.correctView(that.body); 
                            Useful.hideSpinner();
                            Useful.checkNetwork(slider);
@@ -668,6 +671,14 @@ define(function (require) {
                 that.body.find('#main-content').css('min-height', '500px');
                 
                 Useful.hideSpinner();
+             });
+        },
+                
+        getContact: function () {
+            
+            require(["app/views/Contact"], function (Contact) { 
+                Useful.correctView(that.body);
+                slider.slidePage(new Contact().$el);               
              });
         },
 

@@ -13,7 +13,7 @@
     $feeds["people"]  = '/index.php?option=com_ninjarsssyndicator&feed_id=2&format=raw'; 
     $feeds["school-policies"]  = '/index.php?option=com_ninjarsssyndicator&feed_id=3&format=raw'; 
     $feeds["second-level"]  = '/index.php?option=com_ninjarsssyndicator&feed_id=4&format=raw'; 
-    $feeds["college-history"]  = '/index.php?option=com_ninjarsssyndicator&feed_id=5&format=raw'; 
+    $feeds["about-us"]  = '/index.php?option=com_ninjarsssyndicator&feed_id=5&format=raw'; 
     $feeds["further-education"]  = '/index.php?option=com_ninjarsssyndicator&feed_id=6&format=raw'; 
     
     $feeds['events'] = 'https://www.google.com/calendar/feeds/'.$gmail.'/public/full?orderby=starttime&sortorder=ascending&max-results=10&futureevents=true';
