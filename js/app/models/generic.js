@@ -24,11 +24,16 @@ define(function (require) {
             url: function(){
                     type = Backbone.history.fragment;
                     if(in_browser===false){
-                        return feed_domain+Feeds.getFeed();
+                        return this.feed_domain+Feeds.getFeed();
                     }
                     else{
-                        return "/school-proxy.php?feed_domain="+feed_domain+"&context="+Backbone.history.fragment;
+                        return "/school-proxy.php?feed_domain="+this.feed_domain+"&context="+Backbone.history.fragment;
                     }
+            },
+                    
+            initialize: function(options){
+                this.feed_domain = options.feed_domain;
+        
             },
         
             getType: function(){
